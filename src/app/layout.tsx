@@ -9,7 +9,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  title: "Aria — By your side when health gets complicated",
+  title: "Aria Health — Your guide through menopause",
   description:
     "AI-powered health guidance for life's most challenging moments",
 };
