@@ -1,7 +1,7 @@
 "use client";
 
 import { useChat } from "@ai-sdk/react";
-import { useRef, useEffect, useState } from "react";
+import { useRef, useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 
@@ -15,6 +15,14 @@ function getTextContent(parts: { type: string; text?: string }[]) {
 }
 
 export default function ChatPage() {
+  return (
+    <Suspense>
+      <ChatContent />
+    </Suspense>
+  );
+}
+
+function ChatContent() {
   const { messages, sendMessage, status } = useChat();
   const [input, setInput] = useState("");
   const scrollRef = useRef<HTMLDivElement>(null);
