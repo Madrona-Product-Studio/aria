@@ -1,0 +1,113 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Aria assistant message typography */
+.aria-prose h1,
+.aria-prose h2,
+.aria-prose h3 {
+  font-weight: 600;
+  color: #1f2937;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.3;
+}
+
+.aria-prose h1 {
+  font-size: 1.1rem;
+}
+
+.aria-prose h2 {
+  font-size: 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.aria-prose h3 {
+  font-size: 0.9rem;
+}
+
+.aria-prose p {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.65;
+}
+
+.aria-prose ul,
+.aria-prose ol {
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  padding-left: 1.25rem;
+}
+
+.aria-prose ul {
+  list-style-type: disc;
+}
+
+.aria-prose ol {
+  list-style-type: decimal;
+}
+
+.aria-prose li {
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  line-height: 1.6;
+}
+
+.aria-prose li::marker {
+  color: #9ca3af;
+}
+
+.aria-prose strong {
+  font-weight: 600;
+  color: #111827;
+}
+
+.aria-prose em {
+  font-style: italic;
+  color: #4b5563;
+}
+
+.aria-prose blockquote {
+  border-left: 3px solid #c7d2fe;
+  padding-left: 0.75rem;
+  margin: 0.75rem 0;
+  color: #4b5563;
+  font-style: italic;
+}
+
+.aria-prose code {
+  background: #f3f4f6;
+  border-radius: 0.25rem;
+  padding: 0.125rem 0.375rem;
+  font-size: 0.85em;
+}
+
+.aria-prose hr {
+  border: none;
+  border-top: 1px solid #e5e7eb;
+  margin: 1rem 0;
+}
+
+.aria-prose > *:first-child {
+  margin-top: 0;
+}
+
+.aria-prose > *:last-child {
+  margin-bottom: 0;
+}
